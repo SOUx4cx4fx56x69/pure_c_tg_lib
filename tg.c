@@ -185,8 +185,7 @@ https_read(const char * url ){
  }
  
  
- char * get = (char*)url;
- while( *get && *get != '/' || *(get+1) != 'b' ) *get++;
+ char * get = (char*)strstr(url,"/bot");
  if(!*get){
 	close(fd);
 	ERROR_LIB("ERROR: uncorrect link\n");

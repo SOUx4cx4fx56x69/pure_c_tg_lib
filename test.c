@@ -10,7 +10,5 @@ int main(int argcount, char**arguments){
 	tg_request("getMe",0);
 	printf("Request sended, first_name: %s\n",tg_getJSON("first_name"));
 	tg_clearJSON();
-	tg_request("sendMessage","chat_id=@Pure_C","text=Hello?",0);
-	printf("Request sended, result: %s\n",tg_getJSON("description"));
-
+	tg_request("sendMessage","chat_id=@sooqatime","text=Hello?",0);
 }
