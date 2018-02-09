@@ -244,7 +244,7 @@ https_read(const char * url ){
  
  SSL_free(ssl);
  SSL_CTX_free(ctx);
- 
+ close(fd);
  if( getOnlyJSON(returns_tmp) == 0 ){
 	printf("WARNING: Cannot get JSON\n");
 	free(returns_tmp);
